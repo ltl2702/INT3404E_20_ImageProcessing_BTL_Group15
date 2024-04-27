@@ -2,7 +2,7 @@
 
 ## Giới Thiệu
 
-Đây là kho lưu trữ GitHub cho một bài tập lớn trong môn Xử lý Ảnh.
+Đây là repo GitHub cho bài tập lớn giữa kì môn Xử lý Ảnh.
 
 - **Mã Môn Học:** INT3404E 20
 - **Nhóm:** 15
@@ -20,6 +20,7 @@
 Dưới đây là hướng dẫn để bắt đầu với dự án của chúng tôi:
 
 1. Clone repository này về máy tính của bạn:
+
 git clone https://github.com/sondopin/INT3404E_20_ImageProcessing_BTL_Group15.git
  
 3. Tiến hành cài đặt các công cụ và thư viện cần thiết.
