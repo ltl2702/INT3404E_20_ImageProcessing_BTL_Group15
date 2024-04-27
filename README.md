@@ -21,7 +21,7 @@ Dưới đây là hướng dẫn để bắt đầu với dự án của chúng 
 
 1. Clone repository này về máy tính của bạn:
 
-git clone https://github.com/sondopin/INT3404E_20_ImageProcessing_BTL_Group15.git
+- git clone https://github.com/sondopin/INT3404E_20_ImageProcessing_BTL_Group15.git
  
 3. Tiến hành cài đặt các công cụ và thư viện cần thiết.
 
