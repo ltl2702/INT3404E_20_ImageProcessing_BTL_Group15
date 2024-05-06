@@ -44,18 +44,22 @@ if __name__ == "__main__":
         print("Not download model!")
     if module == "train":
         model.train()  
-    elif module == "eval":
+    elif module == "val":
         model.eval()   
 
     # train
     for epoch in range(epochs):
         count = 0
         correct = 0
+        countNum = 0
         for x,y in train_loader:
+            countNum += 1
+            print(countNum)
             count += len(y)
             pred = model(x.to(device))
             optimizer.zero_grad()
             loss_val = loss(pred, y.to(device)) 
+            print("Loss is:", loss_val)
             if module == "train":
                 loss_val.backward()
                 optimizer.step()
