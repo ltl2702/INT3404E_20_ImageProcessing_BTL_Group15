@@ -4,7 +4,7 @@ import numpy as np
 from albumentations import Compose, ColorJitter, ToGray, Rotate
 from random import sample
 
-root_dir = 'wb_recognition_dataset/train'
+root_dir = 'wb_recognition_dataset/train/images'
 
 #random random
 def get_random_augmentation_parameters():
@@ -25,7 +25,7 @@ def get_augmentation_pipeline():
     ])
     return aug
 
-max_images_per_folder = 200
+max_images_per_folder = 30
 
 # duyệt từng thư mục con
 for dir_name in os.listdir(root_dir):
@@ -36,7 +36,7 @@ for dir_name in os.listdir(root_dir):
         images = os.listdir(dir_path)
         num_images = len(images)
         
-        # ảnh nhỏ hơn 200, tăng cường dữ liệu
+        # ảnh nhỏ hơn 30, tăng cường dữ liệu
         if num_images < max_images_per_folder:
             i = 1
             while num_images < max_images_per_folder:
