@@ -43,33 +43,30 @@ def perform_augmentation(root_dir, target_distribution):
             images = os.listdir(dir_path)
             num_images = len(images)
             target_num_images = target_distribution[dir_name]
-            # print("target_num_images", target_num_images)
-            # print("num_images", num_images)
-            print((num_images - train_mean_count)/train_std_dev)
+            # print((num_images - train_mean_count)/train_std_dev)
             
-            # if num_images < target_num_images:
-            #     augmentation_ratio = target_num_images // num_images
+            if num_images < target_num_images:
+                augmentation_ratio = target_num_images // num_images
 
 
-            #     for i in range(augmentation_ratio):
-            #         image_name = sample(images, k=1)[0]
-            #         image_path = os.path.join(dir_path, image_name)
-            #         image = cv2.imread(image_path)
+                for i in range(augmentation_ratio):
+                    image_name = sample(images, k=1)[0]
+                    image_path = os.path.join(dir_path, image_name)
+                    image = cv2.imread(image_path)
 
-            #         aug = get_augmentation_pipeline()
-            #         augmented = aug(image=image)
+                    aug = get_augmentation_pipeline()
+                    augmented = aug(image=image)
 
-            #         new_image_name = f'{image_name.split(".")[0]}_augmented_{i}.png'
-            #         new_image_path = os.path.join(dir_path, new_image_name)
+                    new_image_name = f'{image_name.split(".")[0]}_augmented_{i}.png'
+                    new_image_path = os.path.join(dir_path, new_image_name)
                     
-            #         # Kiểm tra xem ảnh mới có trùng với ảnh nào trong thư mục không
-            #         while any(cv2.imread(os.path.join(dir_path, existing_image)).tolist() == augmented['image'].tolist() for existing_image in images):
-            #             aug = get_augmentation_pipeline()
-            #             augmented = aug(image=image)
-            #         cv2.imwrite(new_image_path, augmented['image'])
+                    # Kiểm tra xem ảnh mới có trùng với ảnh nào trong thư mục không
+                    while any(cv2.imread(os.path.join(dir_path, existing_image)).tolist() == augmented['image'].tolist() for existing_image in images):
+                        aug = get_augmentation_pipeline()
+                        augmented = aug(image=image)
+                    cv2.imwrite(new_image_path, augmented['image'])
 
 
-# Đường dẫn tới thư mục train
 train_folder_path = 'wb_recognition_dataset/train/images'
 
 # Tính phân bố số lượng ảnh của các thư mục con trong thư mục train
