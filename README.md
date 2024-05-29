@@ -35,8 +35,6 @@ Dưới đây là hướng dẫn để bắt đầu với dự án của chúng 
 
 ## Cấu trúc của repository
 
-## Repository Structure
-
 ```bash
 .
 ├── README.md
