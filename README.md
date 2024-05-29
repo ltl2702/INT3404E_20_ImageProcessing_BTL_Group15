@@ -34,7 +34,7 @@ Dưới đây là hướng dẫn để bắt đầu với dự án của chúng 
 4. Mở các tệp và tài liệu hướng dẫn để bắt đầu làm việc.
 
 ## Cấu trúc của repository
-***bash
+'''bash
 │   README.md
 │
 ├───cnn_model
@@ -104,7 +104,7 @@ Dưới đây là hướng dẫn để bắt đầu với dự án của chúng 
         └───saved_model
                 best.pt
                 last.pt
-***
+'''
 ## Kết quả
 Mô hình của nhóm đạt độ chính xác 95,8% trên tập dữ liệu test của thầy
 
