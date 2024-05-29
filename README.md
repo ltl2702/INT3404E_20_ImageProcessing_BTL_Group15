@@ -98,7 +98,7 @@ Dưới đây là hướng dẫn để bắt đầu với dự án của chúng 
 Mô hình của nhóm đạt độ chính xác 95,8% trên tập dữ liệu test của thầy
 
 
-Báo cáo kết thúc của nhóm: [Link báo cáo](report/Full-Report-Group15.pdf)
+Báo cáo kết thúc dự án: [Link báo cáo](report/Full-Report-Group15.pdf)
 
 ## Ghi Chú
 
