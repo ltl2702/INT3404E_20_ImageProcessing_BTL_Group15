@@ -34,77 +34,68 @@ Dưới đây là hướng dẫn để bắt đầu với dự án của chúng 
 4. Mở các tệp và tài liệu hướng dẫn để bắt đầu làm việc.
 
 ## Cấu trúc của repository
-'''bash
-│   README.md
-│
-├───cnn_model
-│       config.py
-│       model.pt
-│       MyDataset.py
-│       OCR_Model.py
-│       train.py
-│       ultis.py
-│
-├───data_processing
-│       augmentation.py
-│       data-analysis.ipynb
-│       reformat_dataset.py
-│
-├───evaluate
-│       efficientNetb0-imagenet-05-best(95.47).pt
-│       evaluate.ipynb
-│       requirements.txt
-│       task2.py
-│
-├───report
-│       Full Report.pdf
-│       Planning-and-Proposal-Development-report-Group15.pdf
-│
-└───transfer_learning
-    ├───EfficientNetB0
-    │   │   EfficientNetB0_transfer_learning.ipynb
-    │   │
-    │   └───saved_model
-    │           efficientNetb0-customed-5-best.pt
-    │           efficientNetb0-customed-5-last.pt
-    │           efficientNetb0-customed-6-best.pt
-    │           efficientNetb0-customed-6-last.pt
-    │           efficientNetb0-imagenet-00-best.pt
-    │           efficientNetb0-imagenet-00-last.pt
-    │           efficientNetb0-imagenet-00.pt
-    │           efficientNetb0-imagenet-01.pt
-    │           efficientNetb0-imagenet-02.pt
-    │           efficientNetb0-imagenet-03.pt
-    │           efficientNetb0-imagenet-04-best.pt
-    │           efficientNetb0-imagenet-04-last.pt
-    │
-    ├───Resnet18
-    │   │   Resnet18_transfer_learning.ipynb
-    │   │
-    │   └───saved_model
-    │           resnet18-ImageNet-0.pt
-    │           resnet18-imagenet-01-best.pt
-    │           resnet18-imagenet-01-last.pt
-    │           resnet18-imagenet-02-1-best.pt
-    │           resnet18-imagenet-02-1-last.pt
-    │
-    ├───Resnet50
-    │   │   resnet50-transfer-learning.ipynb
-    │   │
-    │   └───saved_model
-    │
-    ├───vgg16
-    │   │   vgg16-transfer-learning.ipynb
-    │   │
-    │   └───saved_model
-    │
-    └───yolov8
-        │   yolov8-transfer-learning.ipynb
-        │
-        └───saved_model
-                best.pt
-                last.pt
-'''
+
+## Repository Structure
+
+```bash
+.
+├── README.md
+├── cnn_model  # Mô hình CNN dựa trên các bài báo nghiên cứu
+│   ├── config.py
+│   ├── model.pt
+│   ├── MyDataset.py
+│   ├── OCR_Model.py
+│   ├── train.py
+│   └── ultis.py
+├── data_processing  # File và notebook phân tích và xử lý dữ liệu
+│   ├── augmentation.py
+│   ├── data-analysis.ipynb
+│   └── reformat_dataset.py
+├── evaluate  # Folder cho buổi đánh giá
+│   ├── efficientNetb0-imagenet-05-best(95.47).pt
+│   ├── evaluate.ipynb
+│   ├── requirements.txt
+│   └── task2.py
+├── report  # Các report của nhóm
+│   ├── Full-Report-Group15.pdf
+│   └── Planning-and-Proposal-Development-report-Group15.pdf
+└── transfer_learning  # Folder transfer learning sử dụng các pretrained model
+    ├── EfficientNetB0
+    │   ├── EfficientNetB0_transfer_learning.ipynb
+    │   └── saved_model
+    │       ├── efficientNetb0-customed-5-best.pt
+    │       ├── efficientNetb0-customed-5-last.pt
+    │       ├── efficientNetb0-customed-6-best.pt
+    │       ├── efficientNetb0-customed-6-last.pt
+    │       ├── efficientNetb0-imagenet-00-best.pt
+    │       ├── efficientNetb0-imagenet-00-last.pt
+    │       ├── efficientNetb0-imagenet-00.pt
+    │       ├── efficientNetb0-imagenet-01.pt
+    │       ├── efficientNetb0-imagenet-02.pt
+    │       ├── efficientNetb0-imagenet-03.pt
+    │       ├── efficientNetb0-imagenet-04-best.pt
+    │       └── efficientNetb0-imagenet-04-last.pt
+    ├── Resnet18
+    │   ├── Resnet18_transfer_learning.ipynb
+    │   └── saved_model
+    │       ├── resnet18-ImageNet-0.pt
+    │       ├── resnet18-imagenet-01-best.pt
+    │       ├── resnet18-imagenet-01-last.pt
+    │       ├── resnet18-imagenet-02-1-best.pt
+    │       └── resnet18-imagenet-02-1-last.pt
+    ├── Resnet50
+    │   ├── resnet50-transfer-learning.ipynb
+    │   └── saved_model
+    ├── vgg16
+    │   ├── vgg16-transfer-learning.ipynb
+    │   └── saved_model
+    └── yolov8
+        ├── yolov8-transfer-learning.ipynb
+        └── saved_model
+            ├── best.pt
+            └── last.pt
+```
+
 ## Kết quả
 Mô hình của nhóm đạt độ chính xác 95,8% trên tập dữ liệu test của thầy
 
